@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es2022",
+        "module": "commonjs",
+        "outDir": "./gen/srv/srv",
+        "rootDir": "./srv",
+        "baseUrl": "./",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "preserveConstEnums": true,
+        "sourceMap": false,
+        "allowJs": true,
+        "strict": true,
+        "strictNullChecks": false,
+        "strictPropertyInitialization": false,
+        "esModuleInterop": true
+    },
+    "include": [
+        "./srv/**/*",
+        "./app/tsdeploy/**/*"
+    ]
+}

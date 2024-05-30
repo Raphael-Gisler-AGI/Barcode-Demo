@@ -14,6 +14,7 @@
     "cds-plugin-ui5": "^0.6.13"
   },
   "scripts": {
+    "start-ts-w": "npx cds-ts w",
     "start": "cds-serve",
     "watch-barcode-demo": "cds watch --open barcodedemo/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
