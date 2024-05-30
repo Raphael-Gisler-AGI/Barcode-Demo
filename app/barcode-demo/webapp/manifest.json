@@ -43,7 +43,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.124.0",
       "libs": {
@@ -89,6 +89,11 @@
           "name": "ItemsMain",
           "pattern": ":?query:",
           "target": "ItemsMain"
+        },
+        {
+          "name": "ItemsItemPage",
+          "pattern": "Items({ItemsKey}):?query:",
+          "target": "ItemsItemPage"
         }
       ],
       "targets": {
@@ -98,10 +103,27 @@
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "navigation": {},
+              "navigation": {
+                "Items": {
+                  "detail": {
+                    "route": "ItemsItemPage"
+                  }
+                }
+              },
               "contextPath": "/Items",
               "viewName": "barcodedemo.ext.main.Main",
               "liveMode": true
+            }
+          }
+        },
+        "ItemsItemPage": {
+          "type": "Component",
+          "id": "ItemsItemPage",
+          "name": "sap.fe.core.fpm",
+          "options": {
+            "settings": {
+              "viewName": "barcodedemo.ext.Item",
+              "contextPath": "/Items"
             }
           }
         }
