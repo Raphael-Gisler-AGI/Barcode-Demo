@@ -23,5 +23,12 @@
   ],
   "sapux": [
     "app/barcode-demo"
-  ]
+  ],
+  "cds": {
+    "[development]": {
+      "requires": {
+        "db": "sqlite"
+      }
+    }
+  }
 }

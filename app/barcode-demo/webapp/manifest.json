@@ -91,9 +91,9 @@
           "target": "ItemsMain"
         },
         {
-          "name": "ItemsItemPage",
-          "pattern": "Items({ItemsKey}):?query:",
-          "target": "ItemsItemPage"
+          "pattern": "Items({key}):?query:",
+          "name": "ItemsObjectPage",
+          "target": "ItemsObjectPage"
         }
       ],
       "targets": {
@@ -106,7 +106,7 @@
               "navigation": {
                 "Items": {
                   "detail": {
-                    "route": "ItemsItemPage"
+                    "route": "ItemsObjectPage"
                   }
                 }
               },
@@ -116,14 +116,29 @@
             }
           }
         },
-        "ItemsItemPage": {
+        "ItemsObjectPage": {
           "type": "Component",
-          "id": "ItemsItemPage",
-          "name": "sap.fe.core.fpm",
+          "id": "ItemsObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
-              "viewName": "barcodedemo.ext.Item",
-              "contextPath": "/Items"
+              "contextPath": "/Items",
+              "navigation": {},
+              "content": {
+                "body": {
+                  "sections": {
+                    "myCustomSection": {
+                      "template": "barcodedemo.ext.fragments.Scanner",
+                      "title": "Scanner",
+                      "position": {
+                        "placement": "Before",
+                        "anchor": "Batches"
+                      },
+                      "type": "XMLFragment"
+                    }
+                  }
+                }
+              }
             }
           }
         }
