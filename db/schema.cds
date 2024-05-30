@@ -7,6 +7,6 @@ entity Items : cuid {
     key POSNR      : String;
         UECHA      : String;
         name       : String;
-        to_batches : Association to Items
+        to_batches : Association to many Items
                          on to_batches.UECHA = $self.POSNR;
 }
